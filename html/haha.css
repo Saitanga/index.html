@@ -1,0 +1,1124 @@
+/* ===== IMPORT FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/* ===== RESET AND BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  z-index: 100;
+  margin-top: 20px;
+  filter: drop-shadow(10px);
+}
+
+/* ===== LOGO ===== */
+.logo {
+  font-size: 2.5rem;
+  color: black;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* ===== NAVIGATION ===== */
+nav a {
+  font-size: 1.7rem;
+  color: black;
+  margin-left: 4rem;
+  transition: 0.3s ease;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+}
+
+nav a:hover{
+  color: white;
+  border-bottom: 3px solid papayawhip;
+}
+
+/* ===== HOME SECTION ===== */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  padding-top: 10rem;
+}
+
+.home-image img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.home-content h1 {
+  font-size: 3rem;
+  margin-top: 2rem;
+  color: black;
+}
+
+.home-content h3 {
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: #d3d3d3;
+}
+
+.home-content p {
+  font-size: 1.6rem;
+  color: #d3d3d3;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* ===== SOCIAL ICONS ===== */
+.icons {
+  margin-top: 2rem;
+}
+
+.icons a {
+  color: #222;
+  font-size: 2.5rem;
+  margin: 0 1rem;
+  transition: 0.3s ease;
+}
+
+.icons a:hover {
+  color: papayawhip;
+  transform: scale(1.2);
+}
+
+/* ===== MEDIA QUERY (Responsive Navigation) ===== */
+@media (max-width: 995px) {
+  nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 40%;
+    background: rgba(0, 0, 0, 0.8);
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav a {
+    display: block;
+    margin: 1.5rem 0;
+  }
+}
+
+/* ===== SLIDESHOW FIX ===== */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  padding-top: 10rem;
+}
+
+.home-image {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  height: 450px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.home-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: fade 15s infinite;
+}
+
+.home-image img:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.home-image img:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.home-image img:nth-child(3) {
+  animation-delay: 10s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ===== ABOUT PAGE ===== */
+.about-page .home-content {
+  color: #f0f0f0;
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 3rem;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.about-page .home-content h1,
+.about-page .home-content h3 {
+  color: #ffffff;
+}
+
+.about-page .home-content p {
+  color: #e6e0ff;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.about-page .icons a {
+  color: black;
+}
+
+.about-page .icons a:hover {
+  color: #a8e6cf;
+}
+
+/* ===== IMAGE GALLERY PAGE ===== */
+.images-page {
+  text-align: center;
+}
+
+
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.gallery-item {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-decoration: none;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  display: block;
+}
+
+.gallery-item span {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.65);
+  background: transparent;
+  border-radius: 0;
+  padding: 0.5rem 0;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .gallery-item {
+    width: 80%;
+    max-width: 360px;
+    height: auto;
+  }
+
+  .gallery-item img {
+    height: auto;
+  }
+}
+
+/* ===== PURE CSS RESPONSIVE NAVBAR ===== */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 3rem;
+  color: black;
+  cursor: pointer;
+  user-select: none;
+}
+
+nav {
+  display: flex;
+  gap: 4rem;
+}
+
+@media (max-width: 995px) {
+  .menu-icon {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    background: rgba(0, 0, 0, 0.85);
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #000;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    display: none;
+  }
+
+  nav a {
+    color: white;
+    margin: 1rem 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  nav a:hover {
+    color: papayawhip;
+    border-bottom: none;
+  }
+
+  #menu-toggle:checked ~ nav {
+    display: flex;
+  }
+
+  #menu-toggle:checked + .menu-icon::before {
+    content: "✕";
+  }
+}
+
+/* ===== MEMBERS PAGE ===== */
+.members-page {
+  text-align: center;
+}
+
+.member-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  margin-top: 4rem;
+}
+
+.member-card {
+  width: 250px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  padding: 2rem 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.member-card h3 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.member-card .role {
+  color: #a8e6cf;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.member-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+.member-card:hover img {
+  transform: scale(1.1);
+}
+
+/* ===== MEMBER PORTFOLIO PAGE ===== */
+.member-portfolio {
+  background: url('bg.jpg') center/cover no-repeat fixed;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.member-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 10rem 5%;
+}
+
+.member-card-large {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 4rem;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  max-width: 1000px;
+  width: 100%;
+}
+
+.member-card-large img {
+  width: 320px;
+  height: 380px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.member-card-large img:hover {
+  transform: scale(1.05);
+}
+
+.member-info {
+  flex: 1;
+  text-align: left;
+}
+
+.member-info h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.member-info h3 {
+  font-size: 2rem;
+  color: #a8e6cf;
+  margin-bottom: 2rem;
+}
+
+.member-info p {
+  font-size: 1.6rem;
+  color: #e6e6e6;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.skills h4 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  font-size: 1.5rem;
+  color: #a8e6cf;
+  margin: 0.3rem 0;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  color: black;
+  background: white(255, 255, 255, 0.1);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: lightgray;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .member-card-large {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .member-card-large img {
+    width: 250px;
+    height: 300px;
+  }
+
+  .member-info {
+    text-align: center;
+  }
+}
+
+/* ===== FIX: Prevent overlap on Members Page ===== */
+@media (max-width: 995px) {
+  .members-page .home-content {
+    margin-top: 14rem;
+  }
+}
+
+/* ===== LANDSCAPE PAGE FIX ===== */
+.landscape-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 12rem;
+  margin: 0 auto;
+}
+
+.landscape-page .home-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ===== TRANSPARENT GALLERY CAPTION ===== */
+.gallery-item span,
+.gallery-item a span {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 0.4rem 0;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.65);
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.gallery-item a {
+  background: transparent !important;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== MEMBER WORKS GALLERY (Right Side Preview) ===== */
+.works-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.works-gallery h4 {
+  font-size: 2.2rem;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.works-gallery img {
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.works-gallery img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
+
+/* Responsive — stack gallery below content */
+@media (max-width: 768px) {
+  .works-gallery {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+  }
+
+  .works-gallery h4 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .works-gallery img {
+    width: 120px;
+    height: 90px;
+  }
+}
+/* ===== GLOBAL FONT SIZE ENHANCEMENT ===== */
+body, p, li {
+  font-size: 1.9rem; /* slightly larger for readability */
+}
+
+h1 {
+  font-size: 4rem; /* main titles bigger */
+}
+
+h2, h3, h4 {
+  font-size: 2.6rem; /* subheadings larger */
+}
+
+/* Home Section Text */
+.home-content h1 {
+  font-size: 3.8rem;
+}
+
+.home-content h3 {
+  font-size: 2.4rem;
+}
+
+.home-content p {
+  font-size: 1.9rem;
+}
+
+/* About Page */
+.about-page .home-content p {
+  font-size: 1.9rem;
+  line-height: 1.8;
+}
+
+/* Image Gallery Captions */
+.gallery-item span {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Members Page */
+.members-page .home-content h1 {
+  font-size: 4rem;
+}
+
+.members-page .home-content p {
+  font-size: 2rem;
+}
+
+.member-card h3 {
+  font-size: 2.2rem;
+}
+
+.member-card .role {
+  font-size: 1.8rem;
+}
+
+/* Member Portfolio Text */
+.member-info h1 {
+  font-size: 3.8rem;
+}
+
+.member-info h3 {
+  font-size: 2.4rem;
+}
+
+.member-info p {
+  font-size: 2rem;
+  line-height: 1.8;
+}
+
+/* Buttons */
+.back-btn {
+  font-size: 1.8rem;
+  padding: 1.2rem 2.4rem;
+}
+
+/* ===== IMAGE ZOOM ON CLICK (PORTRAIT & LANDSCAPE) ===== */
+
+/* Hide the fullscreen overlay by default */
+.image-zoom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 999;
+}
+
+/* When the image is targeted (clicked via anchor), show the overlay */
+.image-zoom:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* The zoomed image */
+.image-zoom img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+  transition: transform 0.4s ease;
+}
+
+/* Slight zoom-in animation */
+.image-zoom:target img {
+  transform: scale(1.05);
+}
+
+/* Close button */
+.image-zoom a.close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: white;
+  font-size: 4rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.image-zoom a.close:hover {
+  color: papayawhip;
+}
+
+/* ===== CONTACT ICONS BELOW IMAGE ===== */
+.member-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.member-left img {
+  width: 320px;
+  height: 380px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.member-left img:hover {
+  transform: scale(1.05);
+}
+
+.contact-icons {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.contact-icons h4 {
+  font-size: 2rem;
+  color: #a8e6cf;
+  margin-bottom: 1rem;
+}
+
+.icons-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.icons-row a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: #f5f5f5;
+  font-size: 1.6rem;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icons-row a:hover {
+  color: #a8e6cf;
+  transform: translateY(-2px);
+}
+
+.icons-row i {
+  font-size: 2rem;
+  color: #a8e6cf;
+}
+
+/* ===== RESPONSIVE FIX FOR MEMBER PAGE ===== */
+@media (max-width: 900px) {
+  .member-card-large {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 2rem;
+  }
+
+  .member-left img {
+    width: 260px;
+    height: 300px;
+  }
+
+  .works-gallery {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .works-gallery img {
+    width: 120px;
+    height: 90px;
+  }
+
+  .contact-icons {
+    margin-top: 1.5rem;
+  }
+
+  .contact-icons h4 {
+    font-size: 1.8rem;
+  }
+
+  .icons-row a {
+    font-size: 1.5rem;
+  }
+
+  .member-info {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .member-left img {
+    width: 220px;
+    height: 260px;
+  }
+
+  .works-gallery img {
+    width: 100px;
+    height: 80px;
+  }
+
+  .contact-icons h4 {
+    font-size: 1.6rem;
+  }
+
+  .icons-row a {
+    font-size: 1.4rem;
+  }
+}
+
+/* ===== FIX: Prevent overlap with navbar on smaller screens ===== */
+@media (max-width: 1200px) {
+  .member-section {
+    padding-top: 70rem; /* pushes everything slightly lower */
+  }
+}
+
+@media (max-width: 768px) {
+  .member-section {
+    padding-top: 80rem; /* more space for smaller view */
+  }
+}
+
+@media (max-width: 480px) {
+  .member-section {
+    padding-top: 19rem; /* ensures clear gap on mobile */
+  }
+}
+
+/* ===== HAMBURGER ICON FIX — MATCHES LOGO STYLE ===== */
+.menu-icon {
+  display: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;        /* same as logo */
+  font-weight: 800;         /* same as logo */
+  color: black;             /* same as logo */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background: transparent;
+  border: none;
+  z-index: 9999;
+  position: fixed;
+  top: 2rem;
+  right: 3rem;
+}
+
+.menu-icon:hover {
+  transform: scale(1.1);
+  color: papayawhip;
+}
+
+/* Show the hamburger icon on mobile */
+@media (max-width: 995px) {
+  .menu-icon {
+    display: block;
+  }
+
+  header {
+    justify-content: space-between;
+    padding-right: 7rem; /* creates space for the icon */
+  }
+}
+
+/* Keep the nav under the hamburger when opened */
+@media (max-width: 995px) {
+  nav {
+    z-index: 9998;
+  }
+}
+
+/* ===== IMAGE ZOOM (Medium Size) ===== */
+.image-zoom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 999;
+}
+
+.image-zoom:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Centered enlarged image — not full-screen */
+.image-zoom img {
+  width: 70vw; /* 70% of the screen width */
+  height: auto;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+  transition: transform 0.4s ease;
+  transform: scale(0.9);
+}
+
+.image-zoom:target img {
+  transform: scale(1);
+}
+
+/* Close button */
+.image-zoom a.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: white;
+  font-size: 4rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.image-zoom a.close:hover {
+  color: papayawhip;
+}
+
+/* Responsive fix for small screens */
+@media (max-width: 768px) {
+  .image-zoom img {
+    width: 90vw;
+  }
+}
+
+/* ===== GLOBAL PAGE TRANSITIONS (PURE CSS) ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fade in on load */
+body {
+  opacity: 0;
+  animation: pageFadeIn 0.6s ease-in forwards;
+}
+
+/* Smooth fade-out when navigating between links */
+a {
+  transition: opacity 0.4s ease-in-out;
+}
+
+a:active {
+  opacity: 0.4;
+  transition: opacity 0.2s ease-in-out;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Optional — smoother feel when resizing or switching */
+* {
+  transition: background-color 0.4s ease, color 0.4s ease, transform 0.4s ease;
+}
+
+/* ===== FIX: Move page content below fixed header on mobile ===== */
+@media (max-width: 995px) {
+  .home,
+  .about-page .home-content,
+  .images-page,
+  .members-page,
+  .member-section {
+    margin-top: 10rem !important; /* pushes content lower */
+  }
+}
+
+/* Extra space for smaller devices */
+@media (max-width: 600px) {
+  .home,
+  .about-page .home-content,
+  .images-page,
+  .members-page,
+  .member-section {
+    margin-top: 12rem !important;
+  }
+}
+
+/* ===== FIX: Lower the gallery section to avoid overlap with navbar ===== */
+.images-page .home-content {
+  margin-top: 12rem; /* adjust spacing below the header */
+}
+
+@media (max-width: 768px) {
+  .images-page .home-content {
+    margin-top: 16rem; /* more space for mobile */
+  }
+}
+
+/* ===== FIX: Adjust About Us Content Height for Desktop & Mobile ===== */
+.about-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 16rem; /* gives more breathing room for desktop */
+  padding-bottom: 4rem;
+}
+
+.about-page .home-content {
+  margin-top: 2rem;
+  transform: translateY(-1rem); /* slight lift for balance */
+}
+
+/* Mobile view — higher placement */
+@media (max-width: 768px) {
+  .about-page {
+    padding-top: 1rem; /* keeps it higher for smaller screens */
+  }
+
+  .about-page .home-content {
+    transform: translateY(-3rem);
+  }
+}
+
+.home-content p,
+.home-content h3 {
+  color: black;
+}
+
