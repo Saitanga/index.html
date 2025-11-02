@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landscape Gallery | Portfolio</title>
+  <link rel="stylesheet" href="haha.css" />
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">Portfolio</a>
+
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="images.html">Images</a>
+      <a href="members.html">Members</a>
+    </nav>
+  </header>
+
+  <section class="home landscape-page">
+    <div class="home-content">
+      <h1>Group Picture</h1>
+      <p>Just the two of us</p>
+    </div>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <a href="#land1"><img src="duwo.jpg" alt="Mountain View"></a>
+      </div>
+
+      <div class="gallery-item">
+        <a href="#land2"><img src="duwo2.jpg" alt="Beach Sunset"></a>
+      </div>
+
+      <div class="gallery-item">
+        <a href="#land3"><img src="duwo1.jpg" alt="Forest Path"></a>
+      </div>
+    </div>
+
+    <a href="images.html" class="back-btn">← Back to Gallery</a>
+  </section>
+
+  <!-- ===== FULLSCREEN ZOOM OVERLAYS ===== -->
+  <div id="land1" class="image-zoom">
+    <a href="#" class="close">&times;</a>
+    <img src="duwo.jpg" alt="Zoomed Mountain View">
+  </div>
+
+  <div id="land2" class="image-zoom">
+    <a href="#" class="close">&times;</a>
+    <img src="duwo2.jpg" alt="Zoomed Beach Sunset">
+  </div>
+
+  <div id="land3" class="image-zoom">
+    <a href="#" class="close">&times;</a>
+    <img src="duwo1.jpg" alt="Zoomed Forest Path">
+  </div>
+
+</body>
+</html>
