@@ -33,7 +33,6 @@
   </nav>
 </header>
 
-  
     <section class="home">
   <div class="home-image">
     <img src="doo.jpg" alt="Portfolio background">
@@ -42,16 +41,49 @@
   </div>
 
   <div class="home-content">
-    <h1>Welcome to our Portfolio</h1>
+   <h1 id="type-title"></h1>
     <h3 class="typing-text">We are <span></span></h3>
     <p>The group 5, a two man group that focuses on creating digital art and development projects.</p>
   </div>
 
-  <div class="icons">
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-github"></i></a>
-  </div>
 </section>
+<script>
+const text = "Welcome to our Portfolio";
+let index = 0;
+let isDeleting = false;
+
+function loopTitle() {
+  const title = document.getElementById("type-title");
+
+  if (!isDeleting) {
+    // typing forward
+    title.textContent = text.substring(0, index + 1);
+    index++;
+
+    if (index === text.length) {
+      // full text reached → pause, then delete
+      setTimeout(() => {
+        isDeleting = true;
+        loopTitle();
+      }, 1200);
+      return;
+    }
+  } else {
+    // deleting text
+    title.textContent = text.substring(0, index - 1);
+    index--;
+
+    if (index === 0) {
+      // fully deleted → type again
+      isDeleting = false;
+    }
+  }
+
+  setTimeout(loopTitle, isDeleting ? 70 : 100);
+}
+
+document.addEventListener("DOMContentLoaded", loopTitle);
+</script>
+
   </body>
 </html>
